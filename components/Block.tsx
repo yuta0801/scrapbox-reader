@@ -27,7 +27,16 @@ const BlockBase = (props: { indent: number; children: React.ReactNode }) => (
 
 const Title = (props: TitleType) => <h1>{props.text}</h1>
 
-const CodeBlock = (props: CodeBlockType) => null
+const CodeBlock = (props: CodeBlockType) => (
+  <BlockBase indent={props.indent}>
+    <pre>
+      <code>
+        <div>{props.fileName}</div>
+        <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
+      </code>
+    </pre>
+  </BlockBase>
+)
 
 const Table = (props: TableType) => null
 
