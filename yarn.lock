@@ -1024,6 +1024,11 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.5.0.tgz#5d3923bc5520f355c3a70b72673c92d23719cf4b"
   integrity sha512-YaLBsyAQuEDTyzEuTzg/VwwSqpfNkJ5fiQNIBSGY+UmSpg1+1OHIyMRURzLKO1K7ad3w6kZ+ykgGcMLToR33EQ==
 
+"@progfay/scrapbox-parser@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@progfay/scrapbox-parser/-/scrapbox-parser-5.0.0.tgz#7fe828b108a5fd0e4de80f19f74f2c4c2e9c68c0"
+  integrity sha512-YLdSGLyoZE6OClHR2Vmh3uTiR5cJQ8HSrAqaFzSXoNpNCUiXngjh5GEmvijJKv8MjVK/a9aiUZnhskUG1kO2iA==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
