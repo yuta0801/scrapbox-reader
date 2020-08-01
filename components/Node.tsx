@@ -17,6 +17,8 @@ import type {
   PlainNode as PlainNodeType,
 } from '@progfay/scrapbox-parser'
 import { LinkNode, LinkNodeType } from './LinkNode'
+import { useRouter } from 'next/router'
+import NextLink from 'next/link'
 
 export const Node = (props: NodeType) => {
   switch (props.type) {
@@ -79,6 +81,15 @@ const GoogleMap = (props: GoogleMapNodeType) => null
 
 const Icon = (props: IconNodeType) => null
 
-const HashTag = (props: HashTagNodeType) => null
+const HashTag = (props: HashTagNodeType) => {
+  const { project } = useRouter().query
+  const href = `/${project}/${props.href}`
+
+  return (
+    <NextLink href="/[project]/[page]" as={href}>
+      <a>#{props.href}</a>
+    </NextLink>
+  )
+}
 
 const Plain = (props: PlainNodeType) => <>{props.text}</>
