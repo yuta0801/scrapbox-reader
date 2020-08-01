@@ -10,14 +10,13 @@ import type {
   DecorationNode as DecorationNodeType,
   CodeNode as CodeNodeType,
   BlankNode as BlankNodeType,
-  InternalLinkNode as InternalLinkNodeType,
-  ExternalLinkNode as ExternalLinkNodeType,
   ImageNode as ImageNodeType,
   GoogleMapNode as GoogleMapNodeType,
   IconNode as IconNodeType,
   HashTagNode as HashTagNodeType,
   PlainNode as PlainNodeType,
 } from '@progfay/scrapbox-parser'
+import { LinkNode, LinkNodeType } from './LinkNode'
 
 export const Node = (props: NodeType) => {
   switch (props.type) {
@@ -72,7 +71,7 @@ const Code = (props: CodeNodeType) => null
 
 const Blank = (props: BlankNodeType) => null
 
-const Link = (props: InternalLinkNodeType | ExternalLinkNodeType) => null
+const Link = (props: LinkNodeType) => <LinkNode {...props} />
 
 const Image = (props: ImageNodeType) => null
 
