@@ -1,25 +1,22 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { parse, Page as PageType } from '@progfay/scrapbox-parser'
+import { Page } from '../../components/Page'
 
 type Props = {
   date: number
-  content: {
-    lines: Array<{
-      id: string
-      text: string
-    }>
-  }
+  content: PageType
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ctx => {
   const project = encodeURIComponent(ctx.params.project as string)
   const page = encodeURIComponent(ctx.params.page as string)
-  const url = `https://scrapbox.io/api/pages/${project}/${page}`
-  const content = await fetch(url).then(res => res.json())
+  const url = `https://scrapbox.io/api/pages/${project}/${page}/text`
+  const content: string = await fetch(url).then(res => res.text())
 
   return {
     props: {
       date: Date.now(),
-      content,
+      content: parse(content),
     },
     revalidate: 30,
   }
@@ -32,23 +29,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-const Page = (props: Props) => {
+const View = (props: Props) => {
   if (!props.content) return <>loading...</>
-
-  const date = new Date(props.date)
 
   return (
     <>
-      generated at <time>{date.toLocaleString()}</time>
-      <main>
-        {props.content.lines.map(line => (
-          <p style={{ whiteSpace: 'pre' }} key={line.id}>
-            {line.text}
-          </p>
-        ))}
-      </main>
+      generated at <time>{new Date(props.date).toLocaleString()}</time>
+      <Page blocks={props.content} />
     </>
   )
 }
 
-export default Page
+export default View
