@@ -88,7 +88,25 @@ const Image = (props: ImageNodeType) => (
 
 const GoogleMap = (props: GoogleMapNodeType) => null
 
-const Icon = (props: IconNodeType) => null
+const Icon = (props: IconNodeType) => {
+  const { project } = useRouter().query
+  const path =
+    props.pathType === 'relative' ? `/${project}/${props.path}` : props.path
+  const name = path.split('/')[2]
+
+  return (
+    <NextLink href="/[project]/[page]" as={`${path}`}>
+      <a className="link icon">
+        <img
+          src={`https://scrapbox.io/api/pages${path}/icon`}
+          alt={name}
+          title={name}
+          className="icon"
+        />
+      </a>
+    </NextLink>
+  )
+}
 
 const HashTag = (props: HashTagNodeType) => {
   const { project } = useRouter().query
