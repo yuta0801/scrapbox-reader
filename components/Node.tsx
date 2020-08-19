@@ -55,7 +55,14 @@ export const Node = (props: NodeType) => {
   }
 }
 
-const Quote = (props: QuoteNodeType) => null
+const Quote = (props: QuoteNodeType) => (
+  <blockquote className="quote">
+    <span className="tag">{'>'}</span>
+    {props.nodes.map(node => (
+      <Node {...node} />
+    ))}
+  </blockquote>
+)
 
 const Helpfeel = (props: HelpfeelNodeType) => null
 

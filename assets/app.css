@@ -1,5 +1,6 @@
 .page {
   font-size: 15px;
+  line-height: 28px;
 }
 
 .line img.icon {
@@ -66,4 +67,17 @@
 
 .deco .deco-_ {
   text-decoration: underline;
+}
+
+.line .quote {
+  margin: 0;
+  font-style: italic;
+  background-color: rgba(128, 128, 128, 0.1);
+  display: block;
+  border-left: solid 4px #a0a0a0;
+  padding-left: 4px;
+}
+
+.line .quote > .tag {
+  visibility: hidden;
 }
