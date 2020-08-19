@@ -22,10 +22,16 @@ export const Block = (props: BlockType) => {
 }
 
 const BlockBase = (props: { indent: number; children: React.ReactNode }) => (
-  <div style={{ marginLeft: 1.5 * props.indent + 'em' }}>{props.children}</div>
+  <div style={{ marginLeft: 1.5 * props.indent + 'em' }} className="line">
+    {props.children}
+  </div>
 )
 
-const Title = (props: TitleType) => <h1>{props.text}</h1>
+const Title = (props: TitleType) => (
+  <BlockBase indent={0}>
+    <h1>{props.text}</h1>
+  </BlockBase>
+)
 
 const CodeBlock = (props: CodeBlockType) => (
   <BlockBase indent={props.indent}>
@@ -38,7 +44,9 @@ const CodeBlock = (props: CodeBlockType) => (
   </BlockBase>
 )
 
-const Table = (props: TableType) => null
+const Table = (props: TableType) => (
+  <BlockBase indent={props.indent}>{null}</BlockBase>
+)
 
 const Line = (props: LineType) => (
   <BlockBase indent={props.indent}>
