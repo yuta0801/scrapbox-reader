@@ -6,3 +6,64 @@
   height: 1.3em;
   vertical-align: top;
 }
+
+.deco .deco-\*-1 {
+  font-weight: bold;
+}
+
+.deco .deco-\*-2 {
+  font-size: 1.2em;
+  line-height: 28px;
+}
+
+.deco .deco-\*-3 {
+  font-size: 1.44em;
+  line-height: 35px;
+}
+
+.deco .deco-\*-4 {
+  font-size: 1.73em;
+  line-height: 42px;
+}
+
+.deco .deco-\*-5 {
+  font-size: 2.07em;
+  line-height: 49px;
+}
+
+.deco .deco-\*-6 {
+  font-size: 2.49em;
+  line-height: 56px;
+}
+
+.deco .deco-\*-7 {
+  font-size: 3em;
+  line-height: 63px;
+}
+
+.deco .deco-\*-8 {
+  font-size: 3.58em;
+  line-height: 77px;
+}
+
+.deco .deco-\*-9 {
+  font-size: 4.3em;
+  line-height: 91px;
+}
+
+.deco .deco-\*-10 {
+  font-size: 5.16em;
+  line-height: 105px;
+}
+
+.deco .deco-\/ {
+  font-style: italic;
+}
+
+.deco .deco-- {
+  text-decoration: line-through;
+}
+
+.deco .deco-_ {
+  text-decoration: underline;
+}

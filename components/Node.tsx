@@ -73,7 +73,15 @@ const Strong = (props: StrongNodeType) => (
 
 const Formula = (props: FormulaNodeType) => null
 
-const Decoration = (props: DecorationNodeType) => null
+const Decoration = (props: DecorationNodeType) => (
+  <span className="deco">
+    <span className={props.decos.map(deco => `deco-${deco}`).join(' ')}>
+      {props.nodes.map(node => (
+        <Node {...node} />
+      ))}
+    </span>
+  </span>
+)
 
 const Code = (props: CodeNodeType) => null
 
