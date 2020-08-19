@@ -75,7 +75,16 @@ const Blank = (props: BlankNodeType) => null
 
 const Link = (props: LinkNodeType) => <LinkNode {...props} />
 
-const Image = (props: ImageNodeType) => null
+const Image = (props: ImageNodeType) => (
+  <a
+    href={props.link || props.src}
+    className={props.link ? 'link' : null}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img src={props.src} />
+  </a>
+)
 
 const GoogleMap = (props: GoogleMapNodeType) => null
 
