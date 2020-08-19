@@ -63,7 +63,13 @@ const StrongImage = (props: StrongImageNodeType) => null
 
 const StrongIcon = (props: StrongIconNodeType) => null
 
-const Strong = (props: StrongNodeType) => null
+const Strong = (props: StrongNodeType) => (
+  <strong>
+    {props.nodes.map(node => (
+      <Node {...node} />
+    ))}
+  </strong>
+)
 
 const Formula = (props: FormulaNodeType) => null
 
