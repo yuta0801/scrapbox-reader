@@ -35,12 +35,12 @@ const Title = (props: TitleType) => (
 
 const CodeBlock = (props: CodeBlockType) => (
   <BlockBase indent={props.indent}>
-    <pre>
-      <code>
-        <div>{props.fileName}</div>
-        <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
-      </code>
-    </pre>
+    <code className="code-block">
+      <span className="code-block-start" title={props.fileName}>
+        {props.fileName}
+      </span>
+      <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
+    </code>
   </BlockBase>
 )
 
