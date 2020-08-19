@@ -84,3 +84,13 @@
 .line .quote > .tag {
   visibility: hidden;
 }
+
+.line code {
+  padding: 0;
+  font-size: 90%;
+  color: #342d9c;
+  background-color: rgba(0, 0, 0, 0.04);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 4px;
+}

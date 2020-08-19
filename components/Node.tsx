@@ -90,7 +90,13 @@ const Decoration = (props: DecorationNodeType) => (
   </span>
 )
 
-const Code = (props: CodeNodeType) => null
+const Code = (props: CodeNodeType) => (
+  <code className="code">
+    <span className="backquote"> </span>
+    <span>{props.text}</span>
+    <span className="backquote"> </span>
+  </code>
+)
 
 const Blank = (props: BlankNodeType) => null
 
