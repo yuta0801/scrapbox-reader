@@ -32,6 +32,6 @@ const InternalLink = (props: InternalLinkNodeType) => {
 
 const ExternalLink = (props: ExternalLinkNodeType) => (
   <a href={props.href} rel="noopener noreferrer" target="_blank">
-    {props.content}
+    {props.content || props.href}
   </a>
 )
