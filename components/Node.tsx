@@ -71,7 +71,11 @@ const Helpfeel = (props: HelpfeelNodeType) => (
   </code>
 )
 
-const StrongImage = (props: StrongImageNodeType) => null
+const StrongImage = (props: StrongImageNodeType) => (
+  <a href={props.src} rel="noopener noreferrer" target="_blank">
+    <img src={props.src} className="strong-image" />
+  </a>
+)
 
 const StrongIcon = (props: StrongIconNodeType) => null
 
