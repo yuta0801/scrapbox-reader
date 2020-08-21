@@ -145,3 +145,32 @@ code {
   border-width: 1.5px;
   border-color: #8fadf9;
 }
+
+.table-block table {
+  border-collapse: collapse;
+}
+
+.table-block .table-block-start {
+  padding: 1px 2px;
+  font-size: 0.9em;
+  background-color: #ffcfc6;
+}
+
+.table-block .cell:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.table-block .cell {
+  margin: 0;
+  padding: 0 8px;
+  box-sizing: content-box;
+  white-space: pre;
+}
+
+.table-block .cell:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.table-block .cell:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.04);
+}

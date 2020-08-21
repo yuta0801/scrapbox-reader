@@ -45,7 +45,24 @@ const CodeBlock = (props: CodeBlockType) => (
 )
 
 const Table = (props: TableType) => (
-  <BlockBase indent={props.indent}>{null}</BlockBase>
+  <BlockBase indent={props.indent}>
+    <div className="table-block">
+      <span className="table-block-start">{props.fileName}</span>
+      <table>
+        {props.cells.map(rows => (
+          <tr>
+            {rows.map(columns => (
+              <td className="cell">
+                {columns.map(node => (
+                  <Node {...node} />
+                ))}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </table>
+    </div>
+  </BlockBase>
 )
 
 const Line = (props: LineType) => (
