@@ -64,7 +64,12 @@ const Quote = (props: QuoteNodeType) => (
   </blockquote>
 )
 
-const Helpfeel = (props: HelpfeelNodeType) => null
+const Helpfeel = (props: HelpfeelNodeType) => (
+  <code className="helpfeel">
+    <span className="prefix">?</span>{' '}
+    <span className="entry">{props.text}</span>
+  </code>
+)
 
 const StrongImage = (props: StrongImageNodeType) => null
 

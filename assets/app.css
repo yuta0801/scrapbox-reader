@@ -111,3 +111,16 @@ code {
   background-color: #ffcfc6;
   padding: 1px 2px;
 }
+
+.line code.helpfeel {
+  background-color: #fbebdd;
+  padding: 3px !important;
+}
+
+.line code.helpfeel .prefix {
+  color: #f17c00;
+}
+
+.line code.helpfeel .entry {
+  color: #cc5020;
+}
