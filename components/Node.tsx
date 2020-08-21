@@ -140,7 +140,16 @@ const Image = (props: ImageNodeType) => (
   </a>
 )
 
-const GoogleMap = (props: GoogleMapNodeType) => null
+const GoogleMap = (props: GoogleMapNodeType) => (
+  <a
+    href={props.url}
+    rel="noopener noreferrer"
+    target="_blank"
+    className="link"
+  >
+    {props.place}
+  </a>
+)
 
 const Icon = (props: IconNodeType) => {
   const { project } = useRouter().query
