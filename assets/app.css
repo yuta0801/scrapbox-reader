@@ -174,3 +174,7 @@ code {
 .table-block .cell:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.04);
 }
+
+.line .formula {
+  margin: auto 6px;
+}

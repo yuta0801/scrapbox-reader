@@ -105,7 +105,9 @@ const Strong = (props: StrongNodeType) => (
   </strong>
 )
 
-const Formula = (props: FormulaNodeType) => null
+const Formula = (props: FormulaNodeType) => (
+  <span className="formula">{props.formula}</span>
+)
 
 const Decoration = (props: DecorationNodeType) => (
   <span className="deco">
