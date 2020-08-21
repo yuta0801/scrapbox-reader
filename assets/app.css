@@ -133,3 +133,10 @@ code {
 .line code.helpfeel .entry {
   color: #cc5020;
 }
+
+.line a.link .image {
+  padding-bottom: 3px;
+  border-style: none none solid;
+  border-width: 1.5px;
+  border-color: #8fadf9;
+}

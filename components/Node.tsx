@@ -118,7 +118,7 @@ const Image = (props: ImageNodeType) => (
     rel="noopener noreferrer"
     target="_blank"
   >
-    <img src={props.src} />
+    <img src={props.src} className="image" />
   </a>
 )
 
