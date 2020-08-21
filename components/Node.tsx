@@ -77,7 +77,25 @@ const StrongImage = (props: StrongImageNodeType) => (
   </a>
 )
 
-const StrongIcon = (props: StrongIconNodeType) => null
+const StrongIcon = (props: StrongIconNodeType) => {
+  const { project } = useRouter().query
+  const path =
+    props.pathType === 'relative' ? `/${project}/${props.path}` : props.path
+  const name = path.split('/')[2]
+
+  return (
+    <NextLink href="/[project]/[page]" as={`${path}`}>
+      <a className="link icon">
+        <img
+          src={`https://scrapbox.io/api/pages${path}/icon`}
+          alt={name}
+          title={name}
+          className="icon strong-icon"
+        />
+      </a>
+    </NextLink>
+  )
+}
 
 const Strong = (props: StrongNodeType) => (
   <strong>

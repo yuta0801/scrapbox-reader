@@ -12,6 +12,11 @@
   vertical-align: top;
 }
 
+.line img.strong-icon {
+  height: 3.9em;
+  vertical-align: bottom;
+}
+
 .deco .deco-\*-1 {
   font-weight: bold;
 }
