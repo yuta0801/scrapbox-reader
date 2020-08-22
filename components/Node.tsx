@@ -127,7 +127,9 @@ const Code = (props: CodeNodeType) => (
   </code>
 )
 
-const Blank = (props: BlankNodeType) => null
+const Blank = (props: BlankNodeType) => (
+  <span className="blank">{props.text}</span>
+)
 
 const Link = (props: LinkNodeType) => <LinkNode {...props} />
 
