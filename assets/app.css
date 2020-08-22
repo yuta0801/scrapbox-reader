@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i');
+
+.page {
+  font-size: 15px;
+  line-height: 28px;
+  font-family: 'Roboto', Helvetica, Arial, 'Hiragino Sans', sans-serif;
+  background-color: #fefefe;
+}
+
+.line {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.line img.icon {
+  height: 1.3em;
+  vertical-align: top;
+}
+
+.line img.strong-icon {
+  height: 3.9em;
+  vertical-align: bottom;
+}
+
+.deco .deco-\*-1 {
+  font-weight: bold;
+}
+
+.deco .deco-\*-2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 28px;
+}
+
+.deco .deco-\*-3 {
+  font-weight: bold;
+  font-size: 1.44em;
+  line-height: 35px;
+}
+
+.deco .deco-\*-4 {
+  font-weight: bold;
+  font-size: 1.73em;
+  line-height: 42px;
+}
+
+.deco .deco-\*-5 {
+  font-weight: bold;
+  font-size: 2.07em;
+  line-height: 49px;
+}
+
+.deco .deco-\*-6 {
+  font-weight: bold;
+  font-size: 2.49em;
+  line-height: 56px;
+}
+
+.deco .deco-\*-7 {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 63px;
+}
+
+.deco .deco-\*-8 {
+  font-weight: bold;
+  font-size: 3.58em;
+  line-height: 77px;
+}
+
+.deco .deco-\*-9 {
+  font-weight: bold;
+  font-size: 4.3em;
+  line-height: 91px;
+}
+
+.deco .deco-\*-10 {
+  font-weight: bold;
+  font-size: 5.16em;
+  line-height: 105px;
+}
+
+.deco .deco-\/ {
+  font-style: italic;
+}
+
+.deco .deco-- {
+  text-decoration: line-through;
+}
+
+.deco .deco-_ {
+  text-decoration: underline;
+}
+
+.line .quote {
+  margin: 0;
+  font-style: italic;
+  background-color: rgba(128, 128, 128, 0.1);
+  display: block;
+  border-left: solid 4px #a0a0a0;
+  padding-left: 4px;
+}
+
+.line .quote > .tag {
+  visibility: hidden;
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.line code {
+  padding: 0;
+  font-size: 90%;
+  color: #342d9c;
+  background-color: rgba(0, 0, 0, 0.04);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 4px;
+}
+
+.line .code-block {
+  display: block;
+  line-height: 2em;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.line .code-block .code-block-start {
+  font-size: 0.9em;
+  background-color: #ffcfc6;
+  padding: 1px 2px;
+}
+
+.line code.helpfeel {
+  background-color: #fbebdd;
+  padding: 3px !important;
+}
+
+.line code.helpfeel .prefix {
+  color: #f17c00;
+}
+
+.line code.helpfeel .entry {
+  color: #cc5020;
+}
+
+.line a.link .image {
+  padding-bottom: 3px;
+  border-style: none none solid;
+  border-width: 1.5px;
+  border-color: #8fadf9;
+}
+
+.table-block table {
+  border-collapse: collapse;
+}
+
+.table-block .table-block-start {
+  padding: 1px 2px;
+  font-size: 0.9em;
+  background-color: #ffcfc6;
+}
+
+.table-block .cell:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.table-block .cell {
+  margin: 0;
+  padding: 0 8px;
+  box-sizing: content-box;
+  white-space: pre;
+}
+
+.table-block .cell:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.table-block .cell:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.line .formula {
+  margin: auto 6px;
+}
+
+a {
+  color: #5e8af7;
+}
+
+a:active,
+a:hover,
+a:focus {
+  color: #1555f3;
+}
+
+.line a.page-link {
+  text-decoration: none;
+}
+
+.line.line-title {
+  font-size: 1.73em;
+  line-height: 42px;
+  color: #000;
+  padding-bottom: 21px;
+}
