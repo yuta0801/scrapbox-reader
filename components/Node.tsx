@@ -181,7 +181,9 @@ const HashTag = (props: HashTagNodeType) => {
 
   return (
     <NextLink href="/[project]/[page]" as={href}>
-      <a>#{props.href}</a>
+      <a type="hashTag" className="page-link">
+        #{props.href}
+      </a>
     </NextLink>
   )
 }
