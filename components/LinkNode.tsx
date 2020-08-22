@@ -25,7 +25,7 @@ const InternalLink = (props: InternalLinkNodeType) => {
 
   return (
     <Link href="/[project]/[page]" as={href}>
-      <a>{props.href}</a>
+      <a className="page-link">{props.href}</a>
     </Link>
   )
 }

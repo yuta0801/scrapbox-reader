@@ -183,3 +183,18 @@ code {
 .line .formula {
   margin: auto 6px;
 }
+
+a {
+  color: #5e8af7;
+}
+
+a:active,
+a:hover,
+a:focus {
+  color: #1555f3;
+}
+
+.line a.page-link {
+  text-decoration: none;
+}
+
