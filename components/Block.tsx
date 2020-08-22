@@ -28,9 +28,9 @@ const BlockBase = (props: { indent: number; children: React.ReactNode }) => (
 )
 
 const Title = (props: TitleType) => (
-  <BlockBase indent={0}>
-    <h1>{props.text}</h1>
-  </BlockBase>
+  <div className="line line-title">
+    <span>{props.text}</span>
+  </div>
 )
 
 const CodeBlock = (props: CodeBlockType) => (

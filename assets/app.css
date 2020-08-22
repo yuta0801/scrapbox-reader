@@ -198,3 +198,9 @@ a:focus {
   text-decoration: none;
 }
 
+.line.line-title {
+  font-size: 1.73em;
+  line-height: 42px;
+  color: #000;
+  padding-bottom: 21px;
+}
