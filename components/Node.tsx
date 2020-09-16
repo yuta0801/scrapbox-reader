@@ -1,6 +1,6 @@
 import React from 'react'
 import type {
-  LineNode as NodeType,
+  Node as NodeType,
   QuoteNode as QuoteNodeType,
   HelpfeelNode as HelpfeelNodeType,
   StrongImageNode as StrongImageNodeType,
@@ -11,12 +11,13 @@ import type {
   CodeNode as CodeNodeType,
   BlankNode as BlankNodeType,
   ImageNode as ImageNodeType,
+  LinkNode as LinkNodeType,
   GoogleMapNode as GoogleMapNodeType,
   IconNode as IconNodeType,
   HashTagNode as HashTagNodeType,
   PlainNode as PlainNodeType,
 } from '@progfay/scrapbox-parser'
-import { LinkNode, LinkNodeType } from './LinkNode'
+import { LinkNode } from './LinkNode'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 
