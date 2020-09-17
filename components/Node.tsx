@@ -1,6 +1,6 @@
 import React from 'react'
 import type {
-  LineNode as NodeType,
+  Node as NodeType,
   QuoteNode as QuoteNodeType,
   HelpfeelNode as HelpfeelNodeType,
   StrongImageNode as StrongImageNodeType,
@@ -9,14 +9,16 @@ import type {
   FormulaNode as FormulaNodeType,
   DecorationNode as DecorationNodeType,
   CodeNode as CodeNodeType,
+  CommandLineNode as CommandLineNodeType,
   BlankNode as BlankNodeType,
   ImageNode as ImageNodeType,
+  LinkNode as LinkNodeType,
   GoogleMapNode as GoogleMapNodeType,
   IconNode as IconNodeType,
   HashTagNode as HashTagNodeType,
   PlainNode as PlainNodeType,
 } from '@progfay/scrapbox-parser'
-import { LinkNode, LinkNodeType } from './LinkNode'
+import { LinkNode } from './LinkNode'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 
@@ -38,6 +40,8 @@ export const Node = (props: NodeType) => {
       return <Decoration {...props} />
     case 'code':
       return <Code {...props} />
+    case 'commandLine':
+      return <CommandLine {...props} />
     case 'blank':
       return <Blank {...props} />
     case 'link':
@@ -124,6 +128,14 @@ const Code = (props: CodeNodeType) => (
     <span className="backquote"> </span>
     <span>{props.text}</span>
     <span className="backquote"> </span>
+  </code>
+)
+
+const CommandLine = (props: CommandLineNodeType) => (
+  <code className="cli">
+    <span className="prefix">{props.symbol}</span>
+    <span> </span>
+    <span className="command">{props.text}</span>
   </code>
 )
 
