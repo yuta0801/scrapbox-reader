@@ -9,6 +9,7 @@ import type {
   FormulaNode as FormulaNodeType,
   DecorationNode as DecorationNodeType,
   CodeNode as CodeNodeType,
+  CommandLineNode as CommandLineNodeType,
   BlankNode as BlankNodeType,
   ImageNode as ImageNodeType,
   LinkNode as LinkNodeType,
@@ -39,6 +40,8 @@ export const Node = (props: NodeType) => {
       return <Decoration {...props} />
     case 'code':
       return <Code {...props} />
+    case 'commandLine':
+      return <CommandLine {...props} />
     case 'blank':
       return <Blank {...props} />
     case 'link':
@@ -125,6 +128,14 @@ const Code = (props: CodeNodeType) => (
     <span className="backquote"> </span>
     <span>{props.text}</span>
     <span className="backquote"> </span>
+  </code>
+)
+
+const CommandLine = (props: CommandLineNodeType) => (
+  <code className="cli">
+    <span className="prefix">{props.symbol}</span>
+    <span> </span>
+    <span className="command">{props.text}</span>
   </code>
 )
 
