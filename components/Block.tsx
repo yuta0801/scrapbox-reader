@@ -6,6 +6,7 @@ import {
   Table as TableType,
   Line as LineType,
 } from '@progfay/scrapbox-parser'
+import { useRouter } from 'next/router'
 import { Node } from './Node'
 
 export const Block = (props: BlockType) => {
@@ -33,37 +34,48 @@ const Title = (props: TitleType) => (
   </div>
 )
 
-const CodeBlock = (props: CodeBlockType) => (
-  <BlockBase indent={props.indent}>
-    <code className="code-block">
-      <span className="code-block-start" title={props.fileName}>
-        {props.fileName}
-      </span>
-      <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
-    </code>
-  </BlockBase>
-)
+const CodeBlock = (props: CodeBlockType) => {
+  const { project, page } = useRouter().query
+  const path = `https://scrapbox.io/api/code/${project}/${page}/${props.fileName}`
 
-const Table = (props: TableType) => (
-  <BlockBase indent={props.indent}>
-    <div className="table-block">
-      <span className="table-block-start">{props.fileName}</span>
-      <table>
-        {props.cells.map(rows => (
-          <tr>
-            {rows.map(columns => (
-              <td className="cell">
-                {columns.map(node => (
-                  <Node {...node} />
-                ))}
-              </td>
-            ))}
-          </tr>
-        ))}
-      </table>
-    </div>
-  </BlockBase>
-)
+  return (
+    <BlockBase indent={props.indent}>
+      <code className="code-block">
+        <span className="code-block-start" title={props.fileName}>
+          <a href={path}>{props.fileName}</a>
+        </span>
+        <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
+      </code>
+    </BlockBase>
+  )
+}
+const Table = (props: TableType) => {
+  const { project, page } = useRouter().query
+  const path = `https://scrapbox.io/api/table/${project}/${page}/${props.fileName}`
+
+  return (
+    <BlockBase indent={props.indent}>
+      <div className="table-block">
+        <span className="table-block-start">
+          <a href={path}>{props.fileName}</a>
+        </span>
+        <table>
+          {props.cells.map(rows => (
+            <tr>
+              {rows.map(columns => (
+                <td className="cell">
+                  {columns.map(node => (
+                    <Node {...node} />
+                  ))}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </table>
+      </div>
+    </BlockBase>
+  )
+}
 
 const Line = (props: LineType) => (
   <BlockBase indent={props.indent}>
