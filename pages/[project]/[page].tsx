@@ -5,18 +5,21 @@ import { Page } from '../../components/Page'
 type Props = {
   date: number
   content: PageType
+  exists: boolean
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ctx => {
   const project = encodeURIComponent(ctx.params.project as string)
   const page = encodeURIComponent(ctx.params.page as string)
   const url = `https://scrapbox.io/api/pages/${project}/${page}/text`
-  const content: string = await fetch(url).then(res => res.text())
+  const response = await fetch(url)
+  const content: string = await response.text()
 
   return {
     props: {
       date: Date.now(),
       content: parse(content),
+      exists: response.ok,
     },
     revalidate: 30,
   }
@@ -31,6 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const View = (props: Props) => {
   if (!props.content) return <>loading...</>
+  if (!props.exists) return <>This is an empty page</>
 
   return (
     <>
