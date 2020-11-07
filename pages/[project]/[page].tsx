@@ -22,6 +22,9 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
     props: {
       date: Date.now(),
       content: parse(content),
+      exists: response.ok,
+      project: project,
+      page: page,
     },
     revalidate: 30,
   }
@@ -41,7 +44,9 @@ const View = (props: Props) => {
   return (
     <>
       <Head>
-        <title>/{props.project}/{props.page} - Scrapbox Reader</title>
+        <title>
+          /{props.project}/{props.page} - Scrapbox Reader
+        </title>
       </Head>
       generated at <time>{new Date(props.date).toLocaleString()}</time>
       <Page blocks={props.content} />
