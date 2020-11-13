@@ -42,10 +42,11 @@ const CodeBlock = (props: CodeBlockType) => {
     <BlockBase indent={props.indent}>
       <code className="code-block">
         <span className="code-block-start" title={props.fileName}>
-          <a href={path}>
-            props.fileName.includes('.') ? <a href={path}>{props.fileName}</a> :{' '}
-            {props.fileName}
-          </a>
+          {props.fileName.includes('.') ? (
+            <a href={path}>{props.fileName}</a>
+          ) : (
+            <>{props.fileName}</>
+          )}
         </span>
         <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
       </code>
