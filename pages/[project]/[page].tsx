@@ -23,8 +23,8 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
       date: Date.now(),
       content: parse(content),
       exists: response.ok,
-      project: project,
-      page: page,
+      project: ctx.params.project as string,
+      page: ctx.params.page as string,
     },
     revalidate: 30,
   }
