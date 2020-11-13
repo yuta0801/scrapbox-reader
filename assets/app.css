@@ -208,3 +208,13 @@ a:focus {
 .line code.cli .prefix {
   color: #9c6248;
 }
+
+.table-block .table-block-start a {
+  color: #342d9c;
+  text-decoration: underline;
+}
+
+.line span.code-block .code-block-start a {
+  color: #342d9c;
+  text-decoration: underline;
+}

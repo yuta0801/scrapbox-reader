@@ -42,16 +42,20 @@ const CodeBlock = (props: CodeBlockType) => {
     <BlockBase indent={props.indent}>
       <code className="code-block">
         <span className="code-block-start" title={props.fileName}>
-          <a href={path}>{props.fileName}</a>
+          <a href={path}>
+            props.fileName.includes('.') ? <a href={path}>{props.fileName}</a> :{' '}
+            {props.fileName}
+          </a>
         </span>
         <div style={{ marginLeft: '1.5em' }}>{props.content}</div>
       </code>
     </BlockBase>
   )
 }
+
 const Table = (props: TableType) => {
   const { project, page } = useRouter().query
-  const path = `https://scrapbox.io/api/table/${project}/${page}/${props.fileName}`
+  const path = `https://scrapbox.io/api/table/${project}/${page}/${props.fileName}.csv`
 
   return (
     <BlockBase indent={props.indent}>
