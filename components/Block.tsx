@@ -51,7 +51,7 @@ const CodeBlock = (props: CodeBlockType) => {
 }
 const Table = (props: TableType) => {
   const { project, page } = useRouter().query
-  const path = `https://scrapbox.io/api/table/${project}/${page}/${props.fileName}`
+  const path = `https://scrapbox.io/api/table/${project}/${page}/${props.fileName}.csv`
 
   return (
     <BlockBase indent={props.indent}>
