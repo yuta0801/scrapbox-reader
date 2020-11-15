@@ -40,7 +40,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 const Title = (props: Props) => (
   <Head>
     <title>
-      /{props.project}/{props.page} - Scrapbox Reader
+      {!props.project || !props.page
+        ? 'Loading... - Scrapbox Reader'
+        : `/${props.project}/${props.page} - Scrapbox Reader`}
     </title>
   </Head>
 )
