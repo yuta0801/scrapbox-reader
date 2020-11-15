@@ -37,17 +37,33 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
+const Title = (props: Props) => (
+  <Head>
+    <title>
+      /{props.project}/{props.page} - Scrapbox Reader
+    </title>
+  </Head>
+)
+
 const View = (props: Props) => {
-  if (!props.content) return <>loading...</>
-  if (!props.exists) return <>This is an empty page</>
+  if (!props.content)
+    return (
+      <>
+        <Title {...props} />
+        loading...
+      </>
+    )
+  if (!props.exists)
+    return (
+      <>
+        <Title {...props} />
+        This is an empty page
+      </>
+    )
 
   return (
     <>
-      <Head>
-        <title>
-          /{props.project}/{props.page} - Scrapbox Reader
-        </title>
-      </Head>
+      <Title {...props} />
       generated at <time>{new Date(props.date).toLocaleString()}</time>
       <Page blocks={props.content} />
     </>
