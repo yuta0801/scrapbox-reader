@@ -1072,10 +1072,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@progfay/scrapbox-parser@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@progfay/scrapbox-parser/-/scrapbox-parser-6.0.1.tgz#882ef7a9ddf78ecd926678ff272ae38709bcebc8"
-  integrity sha512-bgGUvbvdxDvcRGWjn9i4sMUbtQYznpvqefBS0bE3ZnFiYbNiWPqx9+IqsQrdM/kbKgr2flODgTi3PmnLmOnU1g==
+"@progfay/scrapbox-parser@^6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@progfay/scrapbox-parser/-/scrapbox-parser-6.0.3.tgz#4aff3c5afdd89ca7873c19aad2681c700e5cdbff"
+  integrity sha512-vW3YxZtbkxjKI3NabHYBerMr/s6jPRh5PdWY6kjzCWsVTc1R78OYRmBn36bWec8fF1Z4T6pNnRAEcuxFIpPW1Q==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
