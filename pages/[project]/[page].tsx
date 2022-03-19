@@ -12,8 +12,8 @@ type Props = {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ctx => {
-  const project = encodeURIComponent(ctx.params.project as string)
-  const page = encodeURIComponent(ctx.params.page as string)
+  const project = encodeURIComponent(ctx.params!.project as string)
+  const page = encodeURIComponent(ctx.params!.page as string)
   const url = `https://scrapbox.io/api/pages/${project}/${page}/text`
   const response = await fetch(url)
   const content: string = await response.text()
@@ -23,8 +23,8 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
       date: Date.now(),
       content: parse(content),
       exists: response.ok,
-      project: ctx.params.project as string,
-      page: ctx.params.page as string,
+      project: ctx.params!.project as string,
+      page: ctx.params!.page as string,
     },
     revalidate: 30,
   }

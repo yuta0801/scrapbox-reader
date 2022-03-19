@@ -148,7 +148,7 @@ const Link = (props: LinkNodeType) => <LinkNode {...props} />
 const Image = (props: ImageNodeType) => (
   <a
     href={props.link || props.src}
-    className={props.link ? 'link' : null}
+    className={props.link ? 'link' : undefined}
     rel="noopener noreferrer"
     target="_blank"
   >
