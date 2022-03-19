@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@progfay/scrapbox-parser": "^6.0.3",
-    "next": "9.5.4",
+    "next": "12.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
