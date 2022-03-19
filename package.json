@@ -6,15 +6,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "@progfay/scrapbox-parser": "^6.0.3",
-    "next": "9.5.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "@progfay/scrapbox-parser": "^7.2.0",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^14.0.27",
-    "@types/react": "^16.9.43",
-    "prettier": "^2.0.5",
-    "typescript": "^3.9.7"
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.41",
+    "prettier": "^2.6.0",
+    "typescript": "^4.3.2"
   }
 }
