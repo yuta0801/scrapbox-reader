@@ -7,6 +7,7 @@ const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <meta name="robots" content="noindex, nofollow" />
+      <link rel="manifest" href="/manifest.json" />
     </Head>
     <Component {...pageProps} />
   </>
