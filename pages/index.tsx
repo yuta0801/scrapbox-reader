@@ -9,7 +9,8 @@ const Index = () => {
     if (!router.isReady) return
 
     try {
-      const open = new URL(location.href).searchParams.get('open')
+      const params = new URL(location.href).searchParams
+      const open = params.get('url') || params.get('text')
       if (!open) return
       const to = new URL(open)
       if (to.host !== 'scrapbox.io') return
